@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 
 	$(".button").on("click",function(){
-		point+=30;
+		point+=1;
 		console.log(point);
 		$(".point").text(point);
 		console.log(point_curs);
