@@ -14,8 +14,8 @@ $(document).ready(function(){
 		point_stay_active = false;
 
 	$("#curs").text("Уровень:"+ level_curs +" До следующего уровня "+ point_curs);
-	$("#curs").text("Уровень:"+ level_video +" До следующего уровня "+ point_video);
-	$("#stay").text("Уровень: 0");
+	$("#video").text("Уровень:"+ level_video +" До следующего уровня "+ point_video);
+	$("#stay").text("Уровень:"+ level_stay +" До следующего уровня "+ point_stay);
 
 
 	$(".button").on("click",function(){
@@ -33,10 +33,7 @@ $(document).ready(function(){
 				point = 0;
 			}
 			$(".point").text(point);
-			level_curs++;
-			point_curs += 9;
-			$("#curs").text("Уровень:"+ level_curs +" До следующего уровня "+ point_curs);
-			
+
 			if ( point_curs_active === false){
 				point_curs_active = true;
 				var x = setTimeout(function tick_curs() {
@@ -46,6 +43,11 @@ $(document).ready(function(){
 				}, 1000);
 
 			}
+
+			level_curs++;
+			point_curs += 9;
+			$("#curs").text("Уровень:"+ level_curs +" До следующего уровня "+ point_curs);
+			
 			break;
 		}
 	});
@@ -58,10 +60,7 @@ $(document).ready(function(){
 				point = 0;
 			}
 			$(".point").text(point);
-			level_video++;
-			point_video += 15;
-			$("#curs").text("Уровень:"+ level_video +" До следующего уровня "+ point_video);
-			
+
 			if ( point_video_active === false){
 				point_video_active = true;
 				var y = setTimeout(function tick_video() {
@@ -71,6 +70,12 @@ $(document).ready(function(){
 				}, 1000);
 
 			}
+
+
+			level_video++;
+			point_video += 15;
+			$("#video").text("Уровень:"+ level_video +" До следующего уровня "+ point_video);
+			
 			break;
 		}
 	});
@@ -83,10 +88,7 @@ $(document).ready(function(){
 				point = 0;
 			}
 			$(".point").text(point);
-			level_stay++;
-			point_stay += 30;
-			$("#curs").text("Уровень:"+ level_stay +" До следующего уровня "+ point_stay);
-			
+
 			if ( point_stay_active === false){
 				point_stay_active = true;
 				var z = setTimeout(function tick_stay() {
@@ -94,8 +96,12 @@ $(document).ready(function(){
 					$(".point").text(point);
 					z = setTimeout(tick_stay,1000);
 				}, 1000);
-
 			}
+
+			level_stay++;
+			point_stay += 30;
+			$("#stay").text("Уровень:"+ level_stay +" До следующего уровня "+ point_stay);
+			
 			break;
 		}
 	});
