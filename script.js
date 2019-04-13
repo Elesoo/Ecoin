@@ -80,7 +80,7 @@ $(document).ready(function(){
 		}
 	});
 
-	$("#video").on("click",function(){
+	$("#stay").on("click",function(){
 
 		while (point >= point_stay){
 			point -= point_stay;
