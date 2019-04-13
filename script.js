@@ -1,15 +1,29 @@
 $(document).ready(function(){
+
 	var point = 0;
+
+	window.localStorage["point"] != undefined ? (
+														point = Number(window.localStorage["point"]),
+														$(".point").text(point)
+														)
+														: 
+														( 
+															window.localStorage.setItem["point",0]
+														);
+														
+
 	// 	level_curs = 0,
 	// 	point_curs = 9,
 	// 	point_curs_active = false,
 
 	$(".button").on("click",function(){
 		point+=1;
-		console.log(point);
+		window.localStorage["point"] = point;
 		$(".point").text(point);
-		console.log(point_curs);
 	});
+
+	//   $(".nav-item").on("click","a", function (event) {
+	//     event.preventDefault();
 
 	// $("#curs").on("click",function(){
 

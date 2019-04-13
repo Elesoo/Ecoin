@@ -6,9 +6,11 @@
 
 	<title>Games</title>
 
+	<link rel="stylesheet" href="bootstrap.css">
 	<link rel="stylesheet" href="style.css">
 
 	<script src="jquery.js"></script>
+	<script src="bootstrap.js"></script>
 	<script src="script.js"></script>
 </head>
 <body>
@@ -16,18 +18,38 @@
 		<div class="point">0</div>
 
 		<div class="auto">
-			<ul>
-				<li class="table" id="cursor">
-					<label>Курсор</label><br>
-					<span class="level">Уровень: <label></label></span><br>
-					<span class="level">До следующего: <label></label></span>
-				</li>
-				<li class="table" id="video">
-					<label>Видеокарта</label><br>
-					<span class="level">Уровень: <label></label></span><br>
-					<span class="level">До следующего: <label></label></span>
-				</li>
-			</ul>
+			<div class="card">
+			  <div class="card-body">
+			    <h5 class="card-title">Курсор <span class="badge badge-secondary">+0</span></h5>
+			    <p class="card-text">Уровень:</p>
+			    <p class="card-text">До следующего:</p>
+			    <a href="#" class="btn btn-primary curs">Улучшить</a>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="card-body">
+			    <h5 class="card-title">Видеокарта <span class="badge badge-secondary">New</span></h5>
+			    <p class="card-text">Уровень:</p>
+			    <p class="card-text">До следующего:</p>
+			    <a href="#" class="btn btn-primary video">Улучшить</a>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="card-body">
+			    <h5 class="card-title">Стойка видеокарт <span class="badge badge-secondary">New</span></h5>
+			    <p class="card-text">Уровень:</p>
+			    <p class="card-text">До следующего:</p>
+			    <a href="#" class="btn btn-primary stay">Улучшить</a>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="card-body">
+			    <h5 class="card-title">Супер компьютер <span class="badge badge-secondary">New</span></h5>
+			    <p class="card-text">Уровень:</p>
+			    <p class="card-text">До следующего:</p>
+			    <a href="#" class="btn btn-primary super">Улучшить</a>
+			  </div>
+			</div>
 		</div>
 
 		<div class="button"><p>Tap Tap</p></div>
