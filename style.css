@@ -23,6 +23,13 @@ body{
   }
 }
 
+@media (max-width: 361px){
+  .auto{
+    height: 390px;
+  }
+}
+
+
 .button {
   position: fixed;
   top: 80%;
