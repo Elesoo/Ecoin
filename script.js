@@ -1,15 +1,15 @@
 $(document).ready(function(){
-	// var point = 0,
+	var point = 0;
 	// 	level_curs = 0,
 	// 	point_curs = 9,
 	// 	point_curs_active = false,
 
-	// $(".button").on("click",function(){
-	// 	point+=1;
-	// 	console.log(point);
-	// 	$(".point").text(point);
-	// 	console.log(point_curs);
-	// });
+	$(".button").on("click",function(){
+		point+=1;
+		console.log(point);
+		$(".point").text(point);
+		console.log(point_curs);
+	});
 
 	// $("#curs").on("click",function(){
 
