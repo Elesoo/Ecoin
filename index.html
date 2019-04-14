@@ -14,45 +14,73 @@
 	<script src="script.js"></script>
 </head>
 <body>
-	<section class="main">
-		<div class="point">0</div>
-		<div class="button"><p>Tap Tap</p></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="point">0</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="second">В секунду: <label id="main-second">0</label></div>
+			</div>
+			<div class="col-sm-12">
+				<button type="button" class="btn btn-primary btn-up" data-toggle="modal" data-target="#exampleModalLong">
+				  Прокачка
+				</button>
+			</div>
+				<div class="button"><p>Tap Tap</p></div>
+			
+		</div>
+	</div>
 
-<!-- 		<div class="auto">
-			<div class="card">
-			  <div class="card-body">
-			    <h5 class="card-title">Курсор <span class="badge badge-secondary"><label id="curs_second">+0</label></span></h5>
-			    <p class="card-text">Уровень:<label id="curs_level">0</label></p>
-			    <p class="card-text">До следующего:<label id="curs_nextLevel">0</label></p>
-			    <a href="#" class="btn btn-primary curs">Улучшить</a>
-			  </div>
-			</div>
-			<div class="card">
-			  <div class="card-body">
-			    <h5 class="card-title">Видеокарта <span class="badge badge-secondary"><label id="video_second">+0</label></span></h5>
-			    <p class="card-text">Уровень:<label id="video_level">0</label></p>
-			    <p class="card-text">До следующего:<label id="video_nextLevel">0</label></p>
-			    <a href="#" class="btn btn-primary video">Улучшить</a>
-			  </div>
-			</div>
-			<div class="card">
-			  <div class="card-body">
-			    <h5 class="card-title">Стойка видеокарт <span class="badge badge-secondary"><label id="stay_second">+0</label></span></h5>
-			    <p class="card-text">Уровень:<label id="stay_level">0</label></p>
-			    <p class="card-text">До следующего:<label id="stay_nextLevel">0</label></p>
-			    <a href="#" class="btn btn-primary stay">Улучшить</a>
-			  </div>
-			</div>
-			<div class="card">
-			  <div class="card-body">
-			    <h5 class="card-title">Супер компьютер <span class="badge badge-secondary"><label id="superComp_second">+0</label></span></h5>
-			    <p class="card-text">Уровень:<label id="superComp_level">0</label></p>
-			    <p class="card-text">До следующего:<label id="superComp_nextLevel">0</label></p>
-			    <a href="#" class="btn btn-primary superComp">Улучшить</a>
-			  </div>
-			</div>
-		</div> -->
-	</section>
+	<div class="modal fade bd-example-modal-sm" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLongTitle">Прокачка:</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+		      <div class="modal-body">
+		        <div class="card">
+						  <div class="card-body">
+						    <h5 class="card-title">Курсор <span class="badge badge-secondary"><label id="curs_second">+0</label></span></h5>
+						    <p class="card-text">Уровень:<label id="curs_level">0</label></p>
+						    <p class="card-text">До следующего:<label id="curs_nextLevel">0</label></p>
+						    <a href="#" class="btn btn-primary curs">Улучшить</a>
+						  </div>
+						</div>
+					<div class="card">
+					  <div class="card-body">
+					    <h5 class="card-title">Видеокарта <span class="badge badge-secondary"><label id="video_second">+0</label></span></h5>
+					    <p class="card-text">Уровень:<label id="video_level">0</label></p>
+					    <p class="card-text">До следующего:<label id="video_nextLevel">0</label></p>
+					    <a href="#" class="btn btn-primary video">Улучшить</a>
+					  </div>
+					</div>
+					<div class="card">
+					  <div class="card-body">
+					    <h5 class="card-title">Стойка видеокарт <span class="badge badge-secondary"><label id="stay_second">+0</label></span></h5>
+					    <p class="card-text">Уровень:<label id="stay_level">0</label></p>
+					    <p class="card-text">До следующего:<label id="stay_nextLevel">0</label></p>
+					    <a href="#" class="btn btn-primary stay">Улучшить</a>
+					  </div>
+					</div>
+					<div class="card">
+					  <div class="card-body">
+					    <h5 class="card-title">Супер компьютер <span class="badge badge-secondary"><label id="superComp_second">+0</label></span></h5>
+					    <p class="card-text">Уровень:<label id="superComp_level">0</label></p>
+					    <p class="card-text">До следующего:<label id="superComp_nextLevel">0</label></p>
+					    <a href="#" class="btn btn-primary superComp">Улучшить</a>
+					  </div>
+					</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
 </body>
 </html>
