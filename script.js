@@ -184,6 +184,7 @@ function load(){
 
 	$(".reload").on("click", function (event) {
   	event.preventDefault();
+    clearTimeout(x);
   	localStorage.clear();
   	window.location.reload();
 	});
