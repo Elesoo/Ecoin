@@ -13,30 +13,36 @@
 	<script src="bootstrap.js"></script>
 	<script src="script.js"></script>
 </head>
-<body>
+<body onload="load()">
+  <nav class="navbar navbar-light bg-light">
+	  <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#settings">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+  </nav>
+
+
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-				<div class="point">0</div>
+				<div class="point">0.000</div>
 			</div>
 			<div class="col-sm-12">
-				<div class="second">В секунду: <label id="main-second">0</label></div>
+				<div class="second">В секунду: +<label id="main-second">0.000</label></div>
 			</div>
 			<div class="col-sm-12">
-				<button type="button" class="btn btn-primary btn-up" data-toggle="modal" data-target="#exampleModalLong">
+				<button type="button" class="btn btn-primary btn-up" data-toggle="modal" data-target="#upgrade">
 				  Прокачка
 				</button>
 			</div>
 				<div class="button"><p>Tap Tap</p></div>
-			
 		</div>
 	</div>
 
-	<div class="modal fade bd-example-modal-sm" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+	<div class="modal fade bd-example-modal-sm" id="upgrade" tabindex="-1" role="dialog" aria-labelledby="upgrade" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="exampleModalLongTitle">Прокачка:</h5>
+	        <h5 class="modal-title" id="upgrade">Прокачка: <label id="menu" class="point"></label> </h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
@@ -44,7 +50,7 @@
 		      <div class="modal-body">
 		        <div class="card">
 						  <div class="card-body">
-						    <h5 class="card-title">Курсор <span class="badge badge-secondary"><label id="curs_second">+0</label></span></h5>
+						    <h5 class="card-title">Курсор <span class="badge badge-secondary">+<label id="curs_second">0</label></span></h5>
 						    <p class="card-text">Уровень:<label id="curs_level">0</label></p>
 						    <p class="card-text">До следующего:<label id="curs_nextLevel">0</label></p>
 						    <a href="#" class="btn btn-primary curs">Улучшить</a>
@@ -52,7 +58,7 @@
 						</div>
 					<div class="card">
 					  <div class="card-body">
-					    <h5 class="card-title">Видеокарта <span class="badge badge-secondary"><label id="video_second">+0</label></span></h5>
+					    <h5 class="card-title">Видеокарта <span class="badge badge-secondary">+<label id="video_second">0</label></span></h5>
 					    <p class="card-text">Уровень:<label id="video_level">0</label></p>
 					    <p class="card-text">До следующего:<label id="video_nextLevel">0</label></p>
 					    <a href="#" class="btn btn-primary video">Улучшить</a>
@@ -60,7 +66,7 @@
 					</div>
 					<div class="card">
 					  <div class="card-body">
-					    <h5 class="card-title">Стойка видеокарт <span class="badge badge-secondary"><label id="stay_second">+0</label></span></h5>
+					    <h5 class="card-title">Стойка видеокарт <span class="badge badge-secondary">+<label id="stay_second">0</label></span></h5>
 					    <p class="card-text">Уровень:<label id="stay_level">0</label></p>
 					    <p class="card-text">До следующего:<label id="stay_nextLevel">0</label></p>
 					    <a href="#" class="btn btn-primary stay">Улучшить</a>
@@ -68,13 +74,45 @@
 					</div>
 					<div class="card">
 					  <div class="card-body">
-					    <h5 class="card-title">Супер компьютер <span class="badge badge-secondary"><label id="superComp_second">+0</label></span></h5>
+					    <h5 class="card-title">Супер компьютер <span class="badge badge-secondary">+<label id="superComp_second">0</label></span></h5>
 					    <p class="card-text">Уровень:<label id="superComp_level">0</label></p>
 					    <p class="card-text">До следующего:<label id="superComp_nextLevel">0</label></p>
 					    <a href="#" class="btn btn-primary superComp">Улучшить</a>
 					  </div>
 					</div>
+					<div class="card">
+					  <div class="card-body">
+					    <h5 class="card-title">Дата центр <span class="badge badge-secondary">+<label id="data_second">0</label></span></h5>
+					    <p class="card-text">Уровень:<label id="data_level">0</label></p>
+					    <p class="card-text">До следующего:<label id="data_nextLevel">0</label></p>
+					    <a href="#" class="btn btn-primary data">Улучшить</a>
+					  </div>
+					</div>
 	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+	<div class="modal fade bd-example-modal-sm" id="settings" tabindex="-1" role="dialog" aria-labelledby="settings" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="settings">Настройки</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+		      <div class="modal-body">
+		        <div class="card">
+						  <div class="card-body">
+						    <a href="#" class="btn btn-primary reload">Сбить все настройки</a>
+						  </div>
+						</div>
+		      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 	      </div>
