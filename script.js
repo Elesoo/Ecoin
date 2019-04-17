@@ -184,9 +184,11 @@ function load(){
 
 	$(".reload").on("click", function (event) {
   	event.preventDefault();
+  	if (confirm("Вы точно хотите удалить все сохранения?")){
     clearTimeout(x);
   	localStorage.clear();
   	window.location.reload();
+  }
 	});
 
 }
