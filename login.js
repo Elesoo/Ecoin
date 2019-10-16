@@ -23,6 +23,8 @@ function enter(){
         console.log("Вы вошли");
     }
   });
+
+  $('.modalEnter').modal('hide');
 }
 
 function registration(){
@@ -45,4 +47,6 @@ function registration(){
         console.log("Вы зарегистрировались");
     }
   });
+
+  $('.modalRegister').modal('hide');
 }
