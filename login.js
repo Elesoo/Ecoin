@@ -40,7 +40,7 @@ function registration(){
     },
     headers: {
       'Content-Type':'application/json'
-    }
+    },
     success: function () {
         console.log("Вы зарегистрировались");
     }
